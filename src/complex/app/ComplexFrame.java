@@ -25,9 +25,10 @@ import java.io.*;
 // User imports
 import complex.image.*;
 import complex.math.*;
+import static complex.app.WindowParameters.*;
 
 // Class declaration
-public class ComplexFrame extends JFrame implements ActionListener, WindowParameters{
+public class ComplexFrame extends JFrame implements ActionListener {
 	// Generate serial ID
 	private static final long serialVersionUID = 5470579037102672801L;
 	
@@ -105,7 +106,7 @@ public class ComplexFrame extends JFrame implements ActionListener, WindowParame
 				e1.printStackTrace();
 			}
 		}
-		else {
+		else { // Otherwise, reset the image
 			ColoringAlgorithm a = ColoringAlgorithm.WEIGHT;
 			// If the Contour choice was selected, switch the enum value
 			if (Algorithm.getSelectedItem().equals("Contour Method")) {
